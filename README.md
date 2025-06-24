@@ -90,119 +90,137 @@ variable parts of the name will be represented as `<??>`. See an example of that
 below in the class list as `apache::mod::<??>`.
 
 ```
-$ puppet parser itemize ~/Projects/puppetlabs-apache/manifests/
+$ bundle exec puppet-itemize spec/fixtures/modules/apache
 Warning: Undeclared module dependancy: portage::makeconf
 Warning: create_resources detected. Please update to use iteration instead.
 Resource usage analysis:
-=======================================
+===========================================
 >> types:
-                          concat |   3
-                concat::fragment |  49
-                            file |  81
-                            exec |   8
-                     apache::mod | 134
-      apache::default_mods::load |   1
-                         package |  11
-                            user |   1
-                           group |   1
-               portage::makeconf |   8
-                   apache::vhost |   3
-                          anchor |   1
-                     apache::mpm |   8
-                       file_line |   3
-                         yumrepo |   1
-    apache::peruser::multiplexer |   1
-     apache::security::rule_link |   1
-                         service |   1
-           apache::custom_config |   1
+                         apache::mod | 143
+                                file |  95
+                    concat::fragment |  52
+                       apache::vhost |  50
+                             package |  16
+                                exec |  14
+                         apache::mpm |   7
+                   portage::makeconf |   7
+                              concat |   3
+                      apache::listen |   2
+                              anchor |   1
+               apache::custom_config |   1
+          apache::default_mods::load |   1
+        apache::peruser::multiplexer |   1
+         apache::security::rule_link |   1
+             apache::vhost::fragment |   1
+                               group |   1
+                             service |   1
+                                user |   1
+                             yumrepo |   1
+
+                          Totals: 20 | 399
 
 >> classes:
-     apache::mod::proxy_balancer |   1
-          apache::confd::no_accf |   1
-               apache::mod::<??> |   2
-         apache::mod::authn_core |   4
-         apache::mod::reqtimeout |   2
-            apache::mod::actions |   2
-              apache::mod::cache |   2
-         apache::mod::ext_filter |   1
-               apache::mod::mime |   6
-         apache::mod::mime_magic |   2
-            apache::mod::rewrite |   3
-            apache::mod::speling |   2
-             apache::mod::suexec |   2
-            apache::mod::version |   2
-        apache::mod::vhost_alias |   3
-         apache::mod::disk_cache |   1
-            apache::mod::headers |   2
-               apache::mod::info |   1
-            apache::mod::userdir |   1
-             apache::mod::filter |   5
-                apache::mod::cgi |   1
-               apache::mod::cgid |   1
-              apache::mod::alias |   2
-         apache::mod::authn_file |   1
-          apache::mod::autoindex |   1
-                apache::mod::dav |   2
-             apache::mod::dav_fs |   1
-            apache::mod::deflate |   1
-                apache::mod::dir |   2
-        apache::mod::negotiation |   1
-           apache::mod::setenvif |   2
-      apache::mod::authz_default |   1
-         apache::mod::authz_user |   1
-            apache::mod::fastcgi |   2
-                 apache::service |   1
-            apache::default_mods |   2
-     apache::default_confd_files |   1
-                          apache |  39
-                apache::mod::dbd |   1
-               apache::mod::ldap |   1
-                     apache::dev |   1
-            apache::mod::prefork |   1
-              apache::mod::proxy |   4
-         apache::mod::proxy_http |   2
-                  apache::params |   2
-      apache::mod::socache_shmcb |   1
-                 apache::package |   1
-                apache::mod::php |   1
-             apache::mod::python |   1
-                apache::mod::ssl |   2
-          apache::mod::auth_kerb |   1
-               apache::mod::wsgi |   1
-          apache::mod::passenger |   3
+                              apache |  80
+             apache::mod::authn_core |  10
+                  apache::mod::proxy |   9
+             apache::mod::proxy_http |   6
+            apache::mod::proxy_http2 |   6
+                 apache::mod::filter |   5
+                   apache::mod::mime |   5
+         apache::mod::proxy_balancer |   5
+                  apache::mod::alias |   4
+                apache::mod::headers |   4
+                apache::mod::rewrite |   4
+             apache::mod::authz_core |   3
+                    apache::mod::env |   3
+                apache::mod::userdir |   3
+            apache::mod::vhost_alias |   3
+                apache::default_mods |   2
+                   apache::mod::<??> |   2
+                apache::mod::actions |   2
+             apache::mod::auth_basic |   2
+             apache::mod::authn_file |   2
+        apache::mod::authz_groupfile |   2
+             apache::mod::authz_user |   2
+                    apache::mod::cgi |   2
+                    apache::mod::dav |   2
+                    apache::mod::dir |   2
+                  apache::mod::http2 |   2
+             apache::mod::mime_magic |   2
+                    apache::mod::php |   2
+             apache::mod::reqtimeout |   2
+               apache::mod::setenvif |   2
+                apache::mod::speling |   2
+            apache::mod::ssl::reload |   2
+                 apache::mod::suexec |   2
+                apache::mod::version |   2
+                      apache::params |   2
+              apache::confd::no_accf |   1
+         apache::default_confd_files |   1
+            apache::mod::auth_gssapi |   1
+              apache::mod::auth_kerb |   1
+           apache::mod::auth_openidc |   1
+              apache::mod::autoindex |   1
+                  apache::mod::cache |   1
+             apache::mod::cache_disk |   1
+                   apache::mod::cgid |   1
+                 apache::mod::dav_fs |   1
+                    apache::mod::dbd |   1
+                apache::mod::deflate |   1
+                    apache::mod::dev |   1
+             apache::mod::disk_cache |   1
+             apache::mod::ext_filter |   1
+                apache::mod::fastcgi |   1
+                   apache::mod::info |   1
+                     apache::mod::jk |   1
+                   apache::mod::ldap |   1
+           apache::mod::log_forensic |   1
+                     apache::mod::md |   1
+            apache::mod::negotiation |   1
+              apache::mod::passenger |   1
+                apache::mod::prefork |   1
+          apache::mod::socache_shmcb |   1
+                    apache::mod::ssl |   1
+                 apache::mod::status |   1
+               apache::mod::watchdog |   1
+                   apache::mod::wsgi |   1
+      apache::mpm::disable_mpm_event |   1
+    apache::mpm::disable_mpm_prefork |   1
+     apache::mpm::disable_mpm_worker |   1
+                     apache::package |   1
+                     apache::service |   1
+                                epel |   1
+
+                          Totals: 70 | 225
 
 >> functions:
-                      versioncmp |  47
-                 ensure_resource |   3
-                 inline_template |   2
-                        template |  94
-                            fail |  58
-                     validate_re |  20
-                   validate_bool |  23
-                        regsubst |   6
-                         defined |  55
-                is_absolute_path |   1
-       validate_apache_log_level |   2
-                         warning |  16
-                        is_array |   9
-                          concat |   2
-          validate_absolute_path |   2
-                            pick |  11
-                 validate_string |   4
-                  validate_array |   4
-                        downcase |   4
-                   validate_hash |   7
-                       is_string |   2
-                         has_key |   4
-                         is_bool |   1
-                           split |   2
-                           empty |  20
-                    enclose_ipv6 |   1
-                          suffix |   2
-                       any2array |   2
-                         is_hash |   5
-                           merge |   1
-                create_resources |   1
+                                fail |  94
+                                 epp |  82
+                          versioncmp |  62
+                             defined |  48
+                               empty |  25
+                            template |  16
+                            regsubst |  14
+                                each |   7
+                             warning |   6
+                         deprecation |   5
+                                pick |   5
+                     inline_template |   4
+                                join |   4
+                           any2array |   3
+                     ensure_resource |   3
+                             flatten |   3
+                               split |   3
+                               array |   2
+                              concat |   2
+              stdlib::deferrable_epp |   2
+                    create_resources |   1
+                            deferred |   1
+                        enclose_ipv6 |   1
+                              prefix |   1
+                              string |   1
+
+                          Totals: 25 | 395
 ```
 
 

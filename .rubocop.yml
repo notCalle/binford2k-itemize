@@ -1,6 +1,10 @@
 inherit_from: .rubocop_todo.yml
 plugins:
   - rubocop-rake
+  - rubocop-rspec
 
 AllCops:
+  Exclude:
+    - spec/fixtures/modules/**/*
+
   NewCops: disable
