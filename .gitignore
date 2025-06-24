@@ -5,3 +5,5 @@ manifests
 *.gem
 pkg
 
+.vendor
+Gemfile.lock
