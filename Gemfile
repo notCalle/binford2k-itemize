@@ -10,6 +10,7 @@ group :test do
   gem 'rubocop-rspec'
 end
 
+gem 'puppet', ENV['PUPPET_GEM_VERSION']
 gem 'rake', '~> 13.3'
 
 gemspec

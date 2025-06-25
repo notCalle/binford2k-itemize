@@ -18,8 +18,8 @@ Gem::Specification.new do |s|
   s.files                 = %w[CHANGELOG.md README.md LICENSE]
   s.files                += Dir.glob('lib/**/*')
   s.files                += Dir.glob('bin/**/*')
-  s.required_ruby_version = Gem::Requirement.new('>= 2.5.0')
-  s.add_runtime_dependency('puppet', '>= 7.0', '< 8.0')
+  s.required_ruby_version = Gem::Requirement.new('>= 3.1.0')
+  s.add_runtime_dependency('puppet', '>= 7.0', '< 9.0')
 
   s.description = <<-DESC
   Run this command with a space separated list of either manifest file paths, or

@@ -1,5 +1,6 @@
 # Unreleased
 
+* Require Puppet 7.x or 8.x, and Ruby 3
 * Require Puppet version 7.x
 
 # v0.0.4
