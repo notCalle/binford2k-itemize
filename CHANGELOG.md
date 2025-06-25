@@ -1,3 +1,7 @@
+# Unreleased
+
+* Require Puppet version 7.x
+
 # v0.0.4
 
 * Stop monkeypatching core classes

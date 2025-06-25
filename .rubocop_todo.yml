@@ -7,13 +7,6 @@
 # versions of RuboCop, may require this file to be generated again.
 
 # Offense count: 1
-# Configuration parameters: Severity, Include.
-# Include: **/*.gemspec
-Gemspec/RequiredRubyVersion:
-  Exclude:
-    - 'puppet-itemize.gemspec'
-
-# Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowForAlignment.
 Layout/CommentIndentation:
@@ -42,7 +35,6 @@ Layout/EmptyLinesAroundBlockBody:
   Exclude:
     - 'bin/puppet-itemize'
     - 'lib/puppet/face/parser/itemize.rb'
-    - 'puppet-itemize.gemspec'
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
@@ -53,13 +45,6 @@ Layout/EmptyLinesAroundClassBody:
     - 'lib/puppet_x/binford2k/itemize/cli.rb'
     - 'lib/puppet_x/binford2k/itemize/parser.rb'
     - 'lib/puppet_x/binford2k/itemize/runner.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: AllowForAlignment, AllowBeforeTrailingComments, ForceEqualSignAlignment.
-Layout/ExtraSpacing:
-  Exclude:
-    - 'puppet-itemize.gemspec'
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
@@ -78,15 +63,6 @@ Layout/HeredocIndentation:
   Exclude:
     - 'lib/puppet/face/parser/itemize.rb'
 
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: AllowForAlignment, EnforcedStyleForExponentOperator, EnforcedStyleForRationalLiterals.
-# SupportedStylesForExponentOperator: space, no_space
-# SupportedStylesForRationalLiterals: space, no_space
-Layout/SpaceAroundOperators:
-  Exclude:
-    - 'puppet-itemize.gemspec'
-
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
@@ -95,12 +71,6 @@ Layout/SpaceAroundOperators:
 Layout/SpaceInsideBlockBraces:
   Exclude:
     - 'lib/puppet_x/binford2k/itemize/parser.rb'
-
-# Offense count: 4
-# This cop supports safe autocorrection (--autocorrect).
-Layout/SpaceInsidePercentLiteralDelimiters:
-  Exclude:
-    - 'puppet-itemize.gemspec'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -183,14 +153,6 @@ Naming/ClassAndModuleCamelCase:
     - 'lib/puppet_x/binford2k/itemize/runner.rb'
     - 'lib/puppet_x/binford2k/itemize/version.rb'
 
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: lowercase, uppercase
-Naming/HeredocDelimiterCase:
-  Exclude:
-    - 'puppet-itemize.gemspec'
-
 # Offense count: 2
 # Configuration parameters: ForbiddenDelimiters.
 # ForbiddenDelimiters: (?i-mx:(^|\s)(EO[A-Z]{1}|END)(\s|$))
@@ -257,12 +219,6 @@ Style/EmptyElse:
   Exclude:
     - 'lib/puppet_x/binford2k/itemize/runner.rb'
 
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Style/ExpandPathArguments:
-  Exclude:
-    - 'puppet-itemize.gemspec'
-
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: EnforcedStyle.
@@ -285,7 +241,6 @@ Style/FrozenStringLiteralComment:
     - 'lib/puppet_x/binford2k/itemize/parser.rb'
     - 'lib/puppet_x/binford2k/itemize/runner.rb'
     - 'lib/puppet_x/binford2k/itemize/version.rb'
-    - 'puppet-itemize.gemspec'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -325,13 +280,6 @@ Style/MultilineBlockChain:
 Style/MutableConstant:
   Exclude:
     - 'lib/puppet_x/binford2k/itemize/version.rb'
-
-# Offense count: 2
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: PreferredDelimiters.
-Style/PercentLiteralDelimiters:
-  Exclude:
-    - 'puppet-itemize.gemspec'
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
@@ -378,7 +326,6 @@ Style/SoleNestedConditional:
 Style/SpecialGlobalVars:
   Exclude:
     - 'bin/puppet-itemize'
-    - 'puppet-itemize.gemspec'
 
 # Offense count: 16
 # This cop supports safe autocorrection (--autocorrect).
@@ -388,7 +335,6 @@ Style/StringLiterals:
   Exclude:
     - 'lib/puppet/face/parser/itemize.rb'
     - 'lib/puppet_x/binford2k/itemize/parser.rb'
-    - 'puppet-itemize.gemspec'
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
